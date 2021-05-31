@@ -1,0 +1,37 @@
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark fixed-top p-2">
+  <a class="navbar-brand" routerLink="">Assignment 4</a>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-bs-toggle="collapse"
+    data-bs-target="#navbarCollapse"
+    aria-controls="navbarCollapse"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a routerLink="about" class="nav-link">About</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="issues" class="nav-link">Issues</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- <div class="container mt-2">
+  <app-about></app-about>
+  <app-issue-added [addedIssue]="appIssue"> </app-issue-added>
+  <app-issues
+    [issueApplicationName]="applicationName"
+    (emitIssue)="newIssueEmitted($event)"
+  ></app-issues>
+</div> -->
+
+<div class="container mt-2">
+  <router-outlet></router-outlet>
+</div>
