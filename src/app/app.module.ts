@@ -11,11 +11,13 @@ import { IssuesService } from './issues/issues.service';
 import { HttpClientModule } from '@angular/common/http';
 import { AboutComponent } from './about/about.component';
 import { RouterModule, Routes } from '@angular/router';
+import { IssueDetailComponent } from './issues/issue-detail/issue-detail.component';
 
 const appRoutes: Routes = [
   { path: '', component: AboutComponent },
   { path: 'about', component: AboutComponent },
   { path: 'issues', component: IssuesComponent },
+  { path: 'issues/:issueDesc', component: IssueDetailComponent },
 ];
 
 @NgModule({
@@ -24,6 +26,7 @@ const appRoutes: Routes = [
     IssuesComponent,
     IssueAddedComponent,
     AboutComponent,
+    IssueDetailComponent,
   ],
   imports: [
     BrowserModule,

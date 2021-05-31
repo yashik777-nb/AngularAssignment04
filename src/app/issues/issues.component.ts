@@ -9,7 +9,6 @@ import { IssuesService } from './issues.service';
 })
 export class IssuesComponent implements OnInit {
   Issue = new Issue('', '', '', '');
-  @Input('issueApplicationName') formTitle: string = '';
   @Output() emitIssue = new EventEmitter<Issue>();
 
   issueDescription: string;

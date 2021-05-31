@@ -1,5 +1,11 @@
-<nav class="navbar navbar-expand-sm bg-primary navbar-dark fixed-top p-2">
-  <a class="navbar-brand" routerLink="">Assignment 4</a>
+<nav class="navbar navbar-expand-sm bg-light p-2">
+  <a
+    class="navbar-brand"
+    routerLink=""
+    routerLinkActive="active"
+    [routerLinkActiveOptions]="{ exact: true }"
+    >Assignment 4</a
+  >
   <button
     class="navbar-toggler"
     type="button"
@@ -14,15 +20,26 @@
   <div class="collapse navbar-collapse" id="navbarCollapse">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a routerLink="about" class="nav-link">About</a>
+        <a routerLink="about" routerLinkActive="active" class="nav-link"
+          >About</a
+        >
       </li>
       <li class="nav-item">
-        <a routerLink="issues" class="nav-link">Issues</a>
+        <a routerLink="issues" routerLinkActive="active" class="nav-link"
+          >Issues</a
+        >
       </li>
     </ul>
   </div>
 </nav>
 
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-md-12">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
 <!-- <div class="container mt-2">
   <app-about></app-about>
   <app-issue-added [addedIssue]="appIssue"> </app-issue-added>
@@ -31,7 +48,3 @@
     (emitIssue)="newIssueEmitted($event)"
   ></app-issues>
 </div> -->
-
-<div class="container mt-2">
-  <router-outlet></router-outlet>
-</div>
